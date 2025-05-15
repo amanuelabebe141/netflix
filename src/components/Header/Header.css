@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.356);
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+}
+
+header .left {
+  display: flex;
+  align-items: center;
+}
+header .left ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+header .left img {
+  height: 80px;
+}
+
+header .right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+header .profile {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  header .left ul {
+    display: none;
+  }
+}
