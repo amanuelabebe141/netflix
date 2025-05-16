@@ -1,0 +1,144 @@
+.card .movie-container{
+    display: flex;
+    object-fit: cover;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;  
+     cursor: grab;
+    display: flex;
+    gap: 10px;
+}
+.card .movie-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card img{
+    width: 200px;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  border-radius: 10px;
+}
+
+.card .movie-container .single{
+    width: 200px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card .movie-container .single p{
+    font-size: 15px;
+    text-align: center;
+} 
+.card .movie-container {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.card .movie-container .single {
+    scroll-snap-align: start;
+}
+.card h1{
+    font-size: 30px;
+    margin: 10px 0;
+}
+.video-container{
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.719);
+}
+.video{
+    width: 50%;
+    height: auto;
+    position: relative;
+    border: 10px solid black;
+    border-radius: 10px;
+    transition: ease-out 0.1s;
+
+}
+.close-btn{
+    position: fixed;
+    top:14%;
+    left: 80%;
+    padding: 10px;
+    background-color: rgb(230, 0, 0);
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    color: wheat;
+    font-weight: 600;
+    z-index: 7000;
+    transition: ease-in 0.3s;
+}
+.close-btn:hover{
+    background-color: rgb(187, 0, 0);
+}
+@media (max-width: 600px) {
+    .card .movie-container .single {
+      width: 130px;
+    }
+  
+    .card img {
+      width: 130px;
+    }
+  
+    .card .movie-container .single p {
+      font-size: 13px;
+    }
+  
+    .card h1 {
+      font-size: 24px;
+      margin: 5px 0;
+    }
+  
+    .video-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+    }
+  
+    .video {
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 16 / 9;
+      border: none;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .video iframe {
+      width: 100vw;
+      height: 100%;
+      border-radius: 8px;
+    }
+  
+    .close-btn {
+      top: 25%;
+      left: auto;
+      right: 5%;
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+  }
+  
